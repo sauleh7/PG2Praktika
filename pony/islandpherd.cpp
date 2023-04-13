@@ -1,7 +1,10 @@
 #include "islandpherd.h"
 
-Islandpherd::Islandpherd(int geburtJahr, string name, bool ekzemer): Pony(geburtJahr, name),ekzemer(ekzemer)
+Islandpherd::Islandpherd()
 {
+}
+
+Islandpherd::Islandpherd(int geburtJahr, string name, bool ekzemer): Pony(geburtJahr, name),ekzemer(ekzemer){
 
 }
 

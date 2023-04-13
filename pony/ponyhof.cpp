@@ -22,7 +22,7 @@ void PonyHof::userDialog(){
 
             break;
         case 3:
-
+            zeiginfo();
             break;
         case 0:
             exit(0);
@@ -40,40 +40,81 @@ void PonyHof::PonyAnlegen() {
     int geburtsJahr = 0;
     bool ekzemer = false;
     bool kinderlieb = false;
+    //die Rasse
+    string choice;
+    char h;
     while (true) {
+
         cout << "Welche Ponyrasse wollen sie einstellen?" << endl;
         cout << "S fuer Shetlandpony oder I fuer Islandpherd: ";
+         cin >> choice;
+       if(choice == "I"||choice == "i"||choice == "S"||choice == "s"){
+           break;
+       }else{
+           cout<<"Weder s noch i wurde eingegben bitte noch mal versuchen"<<endl;
+       }
 
-        string choice;  cin >> choice;
+    }
+
+
+        cout << "Wie soll das Pony heissen? ";
+        cin >> name;
+
+        cout << "In welchem Jahr wurde das Pony geboren? ";
+        cin >> geburtsJahr;
 
         if (choice == "I"||choice == "i") {
-            cout << "Braucht das Pony Ekzemer (y/n)? ";
-            char h; cin >> h;
-            if (h == 'y'||h == 'Y') {
-                ekzemer = true;
+            while (true) {
+                cout << "Braucht das Pony Ekzemer (y/n)? ";
+                 cin >> h;
+                if (h == 'y'||h == 'Y') {
+                    ekzemer = true;
+                    break;
+                }else if(h == 'n'||h == 'N'){
+                    ekzemer = false;
+                    break;
+                }else{
+                    cout<<"Hey J/N eingeben"<<endl;
+                }
             }
-
             Pony* is = new Islandpherd(geburtsJahr, name, ekzemer);
-            //pferdeboxen.push_back(is);
-            break;
+
+            if( einstellen(is)){
+                  cout<<"Pony wurde eingefuegt"<<endl;
+            }else{
+                  cout<<"Volllllll"<<endl;
+            }
         }
 
         else if (choice == "S"||choice == "s") {
-            cout << "Ist das Pony kinderlieb (y/n)? ";
-            char h; cin >> h;
-            if (h == 'y') {
-                kinderlieb = true;}
+
+            while (true) {
+                cout << "Ist das Pony kinderlieb (y/n)? ";
+                 cin >> h;
+                if (h == 'y'||h == 'Y') {
+                    kinderlieb = true;
+                    break;
+                }else if(h == 'n'||h == 'N'){
+                    kinderlieb = false;
+                    break;
+                }else{
+                    cout<<"Hey J/N eingeben"<<endl;
+                }
+            }
+
             Pony* sh = new Shetlandpony(geburtsJahr, name, kinderlieb);
-            //pferdeboxen.push_back(sh);
-            break;
+            if( einstellen(sh)){
+                  cout<<"Pony wurde eingefuegt"<<endl;
+            }else{
+                  cout<<"Volllllll"<<endl;
+            }
+
         }
-        else {
-            cout << "Ungültig" << endl;
-        }
-    }
-    cout<<"Sie haben erfolgreich eingestellt"<<endl;
+
 
 }
+
+
 
 
 

@@ -6,22 +6,18 @@ Pony::Pony():ort(0,0)
 }
 
 Pony::Pony(int geburtsJahr, string name): geburtsJahr(geburtsJahr), name(name), ort(0,0){
-    cout << "Wie soll das Pony heissen? ";
-    cin >> name;
 
-    cout << "In welchem Jahr wurde das Pony geboren? ";
-    cin >> geburtsJahr;
 
 }
 
 string Pony::gibName()
 {
-
+    return name;
 }
 
 int Pony::GibGeburtsjahr()
 {
-
+return geburtsJahr;
 }
 
 void Pony::setzePos(const Position &p)
@@ -37,6 +33,11 @@ bool Pony::istReitbar(int x)
 void Pony::zeigeInfo(){
     cout<<"Name von Pony "<<name<<endl;
     cout<<"GeburtJahr von Pony "<<geburtsJahr<<endl;
+}
+
+void Pony::hihi()
+{
+
 }
 
 

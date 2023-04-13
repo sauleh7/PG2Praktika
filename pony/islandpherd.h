@@ -8,6 +8,7 @@ using namespace std;
 class Islandpherd : public Pony
 {
 public:
+    Islandpherd();
     Islandpherd(int geburtJahr, string name, bool ekzemer);
     bool hatEkzem();
     bool istReitbar();

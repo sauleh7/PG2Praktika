@@ -5,7 +5,7 @@
 #include "stall.h"
 using namespace std;
 
-class PonyHof
+class PonyHof:public Stall
 {
 public:
     PonyHof();

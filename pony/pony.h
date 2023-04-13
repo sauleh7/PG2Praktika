@@ -6,7 +6,7 @@
 using namespace std;
 
 
-class Pony
+class Pony:public Position
 {
 public:
     Pony();
@@ -16,6 +16,7 @@ public:
     void setzePos(const Position& p);
     bool istReitbar(int x);
     void zeigeInfo();
+    virtual void hihi();
 
 
 protected:

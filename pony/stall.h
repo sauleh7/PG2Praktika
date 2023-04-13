@@ -6,7 +6,7 @@
 #define SIZE 20
 using namespace std;
 
-class Stall
+class Stall:public Pony
 {
 public:
     Stall();
