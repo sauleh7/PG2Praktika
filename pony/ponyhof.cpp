@@ -19,6 +19,7 @@ void PonyHof::userDialog(){
             PonyAnlegen();
             break;
         case 2:
+            ponyHolen();
 
             break;
         case 3:
@@ -111,6 +112,19 @@ void PonyHof::PonyAnlegen() {
 
         }
 
+
+}
+
+void PonyHof::ponyHolen()
+{
+    cout<<"Name ?"; string na; cin>>na;
+    Pony* p = herausholen(na);
+    if(p!=nullptr){
+
+    cout<<"Pony wird geritten"<<endl;
+    }else{
+        cout<<"kein Pony gefunden"<<endl;
+    }
 
 }
 

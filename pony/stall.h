@@ -12,7 +12,7 @@ public:
     Stall();
     int belegtBoxen();
     bool einstellen(Pony* p);
-    string herausholen(Pony* p);
+    Pony* herausholen(string name);
     float durchschnittsalter();
     void wiedergang(int x);
     void zeiginfo();

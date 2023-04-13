@@ -11,6 +11,7 @@ public:
     PonyHof();
     void userDialog();
     void PonyAnlegen();
+    void ponyHolen();
 
 private:
     Stall stallung;
