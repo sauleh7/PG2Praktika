@@ -13,7 +13,7 @@ public:
     void PonyAnlegen();
 
 private:
-    vector<Stall> stallung;
+    Stall stallung;
     vector<Pony*>beimReiten;
     int weide;
 

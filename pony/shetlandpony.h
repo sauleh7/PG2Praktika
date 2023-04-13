@@ -10,8 +10,8 @@ class Shetlandpony : public Pony
 public:
     Shetlandpony();
     Shetlandpony(int geburtJahr, string name, bool kinderlieb);
-    virtual void zeigeInfo() override;
-    bool istReitbar(int);
+    void zeigeInfo() ;
+    bool istReitbar(int x);
     bool istKinderlieb();
 private:
     bool kinderlieb;

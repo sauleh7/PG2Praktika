@@ -9,13 +9,11 @@ class Islandpherd : public Pony
 {
 public:
     Islandpherd(int geburtJahr, string name, bool ekzemer);
-    Islandpherd(const Islandpherd & island);
     bool hatEkzem();
     bool istReitbar();
-    virtual void zeigeInfo() override;
+    void zeigeInfo() ;
 private:
     bool ekzemer;
-
 };
 
 #endif // ISLANDPHERD_H

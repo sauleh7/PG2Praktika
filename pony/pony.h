@@ -13,8 +13,8 @@ public:
     Pony(int geburtsJahr, string name);
     string gibName();
     int GibGeburtsjahr();
-    void setzePos(const Position&);
-    bool istReitbar(int);
+    void setzePos(const Position& p);
+    bool istReitbar(int x);
     void zeigeInfo();
 
 

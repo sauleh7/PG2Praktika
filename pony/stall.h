@@ -3,6 +3,7 @@
 #include <iostream>
 #include <vector>
 #include "pony.h"
+#define SIZE 20
 using namespace std;
 
 class Stall
@@ -10,13 +11,13 @@ class Stall
 public:
     Stall();
     int belegtBoxen();
-    bool einstellen(Pony*);
-    string herausholen(Pony*);
+    bool einstellen(Pony* p);
+    string herausholen(Pony* p);
     float durchschnittsalter();
-    void wiedergang(int);
+    void wiedergang(int x);
     void zeiginfo();
 private:
-    vector<Pony*>pferdeboxen;
+    Pony* pferdeboxen[SIZE];
 };
 
 #endif // STALL_H

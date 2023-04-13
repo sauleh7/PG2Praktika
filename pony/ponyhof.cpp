@@ -54,7 +54,7 @@ void PonyHof::PonyAnlegen() {
             }
 
             Pony* is = new Islandpherd(geburtsJahr, name, ekzemer);
-            pferdeboxen.push_back(is);
+            //pferdeboxen.push_back(is);
             break;
         }
 
@@ -64,7 +64,7 @@ void PonyHof::PonyAnlegen() {
             if (h == 'y') {
                 kinderlieb = true;}
             Pony* sh = new Shetlandpony(geburtsJahr, name, kinderlieb);
-            pferdeboxen.push_back(sh);
+            //pferdeboxen.push_back(sh);
             break;
         }
         else {

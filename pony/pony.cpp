@@ -24,12 +24,12 @@ int Pony::GibGeburtsjahr()
 
 }
 
-void Pony::setzePos(const Position &)
+void Pony::setzePos(const Position &p)
 {
 
 }
 
-bool Pony::istReitbar(int)
+bool Pony::istReitbar(int x)
 {
 
 }

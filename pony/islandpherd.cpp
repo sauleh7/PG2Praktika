@@ -4,6 +4,17 @@ Islandpherd::Islandpherd(int geburtJahr, string name, bool ekzemer): Pony(geburt
 {
 
 }
+
+bool Islandpherd::hatEkzem()
+{
+    return ekzemer;
+
+}
+
+bool Islandpherd::istReitbar()
+{
+    return ekzemer;
+}
 void Islandpherd::zeigeInfo(){
     Pony::zeigeInfo();
     cout<<"Brauch des Pony Ekzemer"<<ekzemer;
