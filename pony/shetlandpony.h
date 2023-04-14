@@ -11,7 +11,7 @@ public:
     Shetlandpony();
     Shetlandpony(int geburtJahr, string name, bool kinderlieb);
     void zeigeInfo() ;
-    bool istReitbar(int x);
+    bool istReitbar(int alt);
     bool istKinderlieb();
 private:
     bool kinderlieb;

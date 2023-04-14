@@ -11,7 +11,7 @@ public:
     Islandpherd();
     Islandpherd(int geburtJahr, string name, bool ekzemer);
     bool hatEkzem();
-    bool istReitbar();
+    bool istReitbar(int alt);
     void zeigeInfo() ;
 private:
     bool ekzemer;

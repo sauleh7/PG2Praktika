@@ -1,4 +1,5 @@
 #include "pony.h"
+#include "islandpherd.h"
 
 Pony::Pony():ort(0,0)
 {
@@ -25,8 +26,9 @@ void Pony::setzePos(const Position &p)
 
 }
 
-bool Pony::istReitbar(int x)
+bool Pony::istReitbar(int alt)
 {
+
 
 }
 

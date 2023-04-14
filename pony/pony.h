@@ -14,7 +14,7 @@ public:
     string gibName();
     int GibGeburtsjahr();
     void setzePos(const Position& p);
-    bool istReitbar(int x);
+    bool istReitbar(int alt);
     void zeigeInfo();
     virtual void hihi();
 

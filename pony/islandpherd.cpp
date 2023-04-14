@@ -14,9 +14,17 @@ bool Islandpherd::hatEkzem()
 
 }
 
-bool Islandpherd::istReitbar()
+bool Islandpherd::istReitbar(int alt)
 {
-    return ekzemer;
+    if(alt >= 10){
+        cout<<"Pony ist Reitbar"<<endl;
+        return true;
+    }
+    else{
+        cout<<"Pony ist nicht Reitbar"<<endl;
+    }
+
+    return false;
 }
 void Islandpherd::zeigeInfo(){
     Pony::zeigeInfo();
