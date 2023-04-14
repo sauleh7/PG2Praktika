@@ -41,89 +41,74 @@ void PonyHof::PonyAnlegen() {
     int geburtsJahr = 0;
     bool ekzemer = false;
     bool kinderlieb = false;
-    //die Rasse
-    string choice;
-    char h;
+    string rasse;
+
     while (true) {
-
-        cout << "Welche Ponyrasse wollen sie einstellen?" << endl;
-        cout << "S fuer Shetlandpony oder I fuer Islandpherd: ";
-         cin >> choice;
-       if(choice == "I"||choice == "i"||choice == "S"||choice == "s"){
-           break;
-       }else{
-           cout<<"Weder s noch i wurde eingegben bitte noch mal versuchen"<<endl;
-       }
-
+        cout << "Welche Ponyrasse wollen Sie einstellen? (S fuer Shetlandpony, I fuer Islandpferd): ";
+        cin >> rasse;
+        if (rasse == "S" || rasse == "s" || rasse == "I" || rasse == "i") {
+            break;
+        } else {
+            cout << "Ungueltige Eingabe. Bitte versuchen Sie es erneut." << endl;
+        }
     }
+    cout << "Wie soll das Pony heissen? ";
+    cin >> name;
+    cout << "In welchem Jahr wurde das Pony geboren? ";
+    cin >> geburtsJahr;
 
-
-        cout << "Wie soll das Pony heissen? ";
-        cin >> name;
-
-        cout << "In welchem Jahr wurde das Pony geboren? ";
-        cin >> geburtsJahr;
-
-        if (choice == "I"||choice == "i") {
-            while (true) {
-                cout << "Braucht das Pony Ekzemer (y/n)? ";
-                 cin >> h;
-                if (h == 'y'||h == 'Y') {
-                    ekzemer = true;
-                    break;
-                }else if(h == 'n'||h == 'N'){
-                    ekzemer = false;
-                    break;
-                }else{
-                    cout<<"Hey J/N eingeben"<<endl;
-                }
-            }
-            Pony* is = new Islandpherd(geburtsJahr, name, ekzemer);
-
-            if( einstellen(is)){
-                  cout<<"Pony wurde eingefuegt"<<endl;
-            }else{
-                  cout<<"Volllllll"<<endl;
+    if (rasse == "S" || rasse == "s") {
+        while (true) {
+            cout << "Ist das Pony kinderlieb? (J/N) ";
+            char antwort;
+            cin >> antwort;
+            if (antwort == 'J' || antwort == 'j') {
+                kinderlieb = true;
+                break;
+            } else if (antwort == 'N' || antwort == 'n') {
+                kinderlieb = false;
+                break;
+            } else {
+                cout << "Ungueltige Eingabe. Bitte geben Sie J oder N ein." << endl;
             }
         }
-
-        else if (choice == "S"||choice == "s") {
-
-            while (true) {
-                cout << "Ist das Pony kinderlieb (y/n)? ";
-                 cin >> h;
-                if (h == 'y'||h == 'Y') {
-                    kinderlieb = true;
-                    break;
-                }else if(h == 'n'||h == 'N'){
-                    kinderlieb = false;
-                    break;
-                }else{
-                    cout<<"Hey J/N eingeben"<<endl;
-                }
-            }
-
-            Pony* sh = new Shetlandpony(geburtsJahr, name, kinderlieb);
-            if( einstellen(sh)){
-                  cout<<"Pony wurde eingefuegt"<<endl;
-            }else{
-                  cout<<"Volllllll"<<endl;
-            }
-
+        Pony* pony = new Shetlandpony(geburtsJahr, name, kinderlieb);
+        if (einstellen(pony)) {
+            cout << "Pony wurde eingestellt." << endl;
+        } else {
+            cout << "Keine Boxen mehr frei." << endl;
         }
-
-
+    } else if (rasse == "I" || rasse == "i") {
+        while (true) {
+            cout << "Braucht das Pony Ekzemer? (J/N) ";
+            char antwort;
+            cin >> antwort;
+            if (antwort == 'J' || antwort == 'j') {
+                ekzemer = true;
+                break;
+            } else if (antwort == 'N' || antwort == 'n') {
+                ekzemer = false;
+                break;
+            } else {
+                cout << "Ungueltige Eingabe. Bitte geben Sie J oder N ein." << endl;
+            }
+        }
+        Pony* pony = new Islandpherd(geburtsJahr, name, ekzemer);
+        if (einstellen(pony)) {
+            cout << "Pony wurde eingestellt." << endl;
+        } else {
+            cout << "Keine Boxen mehr frei." << endl;
+        }
+    }
 }
 
-void PonyHof::ponyHolen()
-{
+void PonyHof::ponyHolen(){
     cout<<"Name ?"; string na; cin>>na;
     Pony* p = herausholen(na);
     if(p!=nullptr){
-
     cout<<"Pony wird geritten"<<endl;
     }else{
-        cout<<"kein Pony gefunden"<<endl;
+        cout<<"Kein Pony gefunden"<<endl;
     }
 
 }

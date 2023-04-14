@@ -3,6 +3,8 @@
 #include <iostream>
 #include <vector>
 #include "pony.h"
+#include <iomanip>
+ #include <fstream>
 #define SIZE 20
 using namespace std;
 
