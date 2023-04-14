@@ -2,3 +2,4 @@ Islandpferd    Hera           2003        n
 Islandpferd    Fee            2012        y
 Islandpferd    Odin           2013        n
 Shetlandpony   Charle         2007        y
+Shetlandpony   kolo     2008    y

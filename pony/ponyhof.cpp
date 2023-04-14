@@ -104,19 +104,12 @@ void PonyHof::PonyAnlegen() {
 
 void PonyHof::ponyHolen(){
     cout<<"Name des zu holenden Ponys: "; string na; cin>>na;
-    cout<<"Alter des Reiters: "; int reiteralt; cin>>reiteralt;
     Pony* p = herausholen(na);
-    if (p == nullptr) {
-           cout << "Pony nicht gefunden" << endl;
-           return;
-       }
-    if( !p->istReitbar(reiteralt) ){
-        einstellen(p);
-        cout<<"Pony ist nicht Reitbar"<<endl;
-        return;
-
+    if(p==nullptr){
+    cout<<"Pony wird geritten"<<endl;
+    }else{
+        cout<<"Kein Pony gefunden"<<endl;
     }
-
 
 }
 

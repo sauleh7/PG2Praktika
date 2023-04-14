@@ -37,8 +37,17 @@ Pony* p;
         if(pferdeboxen[i] != nullptr){
             if( pferdeboxen[i]->gibName()==name){
                 p = pferdeboxen[i];
-                pferdeboxen[i] == nullptr;
-                return p ;
+
+                cout<<"Alter des Reiters: "; int reiteralt; cin>>reiteralt;
+                if(p->istReitbar(reiteralt)){
+                    pferdeboxen[i] == nullptr;
+                    return p ;
+                }
+                else{
+                    cout<<"Pony ist nicht Reitbar"<<endl;
+                    return nullptr;
+                }
+
             }
 
         }
@@ -95,7 +104,7 @@ void Stall::zeiginfo(){
             cout << left << setw(nameWidth) << setfill(separator) <<pferdeboxen[i]->GibGeburtsjahr()<<gap;
             cout << left << setw(nameWidth) << setfill(separator) <<(isj->hatEkzem()?"y":"n")<<gap<<endl;
             myoutfile<< "Islandpherd" << " " << pferdeboxen[i]->gibName() << "           "
-                     << pferdeboxen[i]->GibGeburtsjahr() << "   " << (isj->hatEkzem()?" y":" n") << endl;
+                     << pferdeboxen[i]->GibGeburtsjahr() << "   " << (isj->hatEkzem()?"y":" n") << endl;
             cout<<endl;
         }
         else if(mo = dynamic_cast<Shetlandpony*>(pferdeboxen[i])){
@@ -103,8 +112,8 @@ void Stall::zeiginfo(){
             cout << left << setw(nameWidth) << setfill(separator) <<pferdeboxen[i]->gibName()<<gap;
             cout << left << setw(nameWidth) << setfill(separator) <<pferdeboxen[i]->GibGeburtsjahr()<<gap;
             cout << left << setw(nameWidth) << setfill(separator) <<(mo->istKinderlieb()?"y":"n")<<gap<<endl;
-            myoutfile << "Shetlandpony" << "   " << pferdeboxen[i]->gibName() << "           "
-                      << pferdeboxen[i]->GibGeburtsjahr() << "   "<<(mo->istKinderlieb()?" y":" n")<<endl;
+            myoutfile << "Shetlandpony" << "   " << pferdeboxen[i]->gibName() << "     "
+                      << pferdeboxen[i]->GibGeburtsjahr() << "   "<<(mo->istKinderlieb()?" y":"n")<<endl;
             cout<<endl;
         }
 

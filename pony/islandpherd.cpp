@@ -16,15 +16,12 @@ bool Islandpherd::hatEkzem()
 
 bool Islandpherd::istReitbar(int alt)
 {
-    if(alt >= 10){
-        cout<<"Pony ist Reitbar"<<endl;
+    if(alt<=10){
         return true;
-    }
-    else{
-        cout<<"Pony ist nicht Reitbar"<<endl;
-    }
+    }else{
+        cout<<"Islandpferd Alt muss unter 10 sein"<<endl;
+        return false;}
 
-    return false;
 }
 void Islandpherd::zeigeInfo(){
     Pony::zeigeInfo();

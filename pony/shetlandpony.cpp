@@ -17,17 +17,16 @@ void Shetlandpony::zeigeInfo(){
 
 bool Shetlandpony::istReitbar(int alt){
     if( alt >= 5 && alt <= 12){
-        cout<<"Pony ist Reitbar"<<endl;
-        return true;
+        if(alt <= 8 && !istKinderlieb()){
+            cout<<"Pony ist nicht Reitbar, Reiter soll mindestens 8 Jahr alt sein"<<endl;
+            return false;
+        }
+        else
+            return true;
     }
-     if(alt <= 8){
-         return kinderlieb;
-     }
     else{
-        cout<<"Pony ist nicht Reitbar, Reiter soll mindestens 8 Jahr alt sein"<<endl;
-    }
-
-    return false;
+        cout<<"Reiteralt muss zwischen  5 und 12 sein"<<endl;
+        return false;}
 }
 
 bool Shetlandpony::istKinderlieb()

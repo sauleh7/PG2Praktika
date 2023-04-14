@@ -1,5 +1,6 @@
 #include "pony.h"
 #include "islandpherd.h"
+#include "shetlandpony.h"
 
 Pony::Pony():ort(0,0)
 {
@@ -26,11 +27,21 @@ void Pony::setzePos(const Position &p)
 
 }
 
-bool Pony::istReitbar(int alt)
-{
+bool Pony::istReitbar(int alt){
+    Islandpherd *Is;
+    Shetlandpony *mo;
 
-
-}
+    if((Is=dynamic_cast<Islandpherd*>(this))){
+        if(Is->istReitbar(alt)){
+            return true;}
+        else
+            return false;
+    }else if((mo=dynamic_cast<Shetlandpony*>(this))){
+        if(mo->istReitbar(alt)){
+            return true;}
+        else
+            return false;}
+    return true;}
 
 void Pony::zeigeInfo(){
     cout<<"Name von Pony "<<name<<endl;
