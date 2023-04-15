@@ -3,3 +3,9 @@ Islandpferd    Fee            2012        y
 Islandpferd    Odin           2013        n
 Shetlandpony   Charle         2007        y
 Shetlandpony   kolo     2008    y
+Shetlandpony   Lols     2001    y
+Islandpherd lpl”           2006    n
+Shetlandpony   kok     2005    y
+Shetlandpony   ko     2005    y
+Shetlandpony   sa     2005    y
+Shetlandpony   kks     2015    y

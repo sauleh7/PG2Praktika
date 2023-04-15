@@ -5,6 +5,11 @@ Shetlandpony::Shetlandpony()
 
 }
 
+Shetlandpony::~Shetlandpony()
+{
+
+}
+
 Shetlandpony::Shetlandpony(int geburtJahr, string name, bool kinderlieb): Pony(geburtJahr, name), kinderlieb(kinderlieb)
 {
 

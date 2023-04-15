@@ -4,6 +4,11 @@ Islandpherd::Islandpherd()
 {
 }
 
+Islandpherd::~Islandpherd()
+{
+
+}
+
 Islandpherd::Islandpherd(int geburtJahr, string name, bool ekzemer): Pony(geburtJahr, name),ekzemer(ekzemer){
 
 }

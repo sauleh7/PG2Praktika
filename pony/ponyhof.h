@@ -13,6 +13,7 @@ public:
     void PonyAnlegen();
     void ponyHolen();
 
+
 private:
     Stall stallung;
     vector<Pony*>beimReiten;

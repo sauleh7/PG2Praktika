@@ -53,19 +53,29 @@ Pony* p;
         }
 
     }
-
+    cout<<"Kein Pony gefunden"<<endl;
     return nullptr;
 }
 
 float Stall::durchschnittsalter()
 {
-
+    int summe = 0;
+    int anzahl = SIZE;
+    for (int i = 0; i < anzahl; ++i) {
+        summe += pferdeboxen[i]->GibGeburtsjahr();
+    }
+    return (double)summe/anzahl;
 }
 
-void Stall::wiedergang(int x)
+
+int Stall::berechneJahr()
 {
-
+    // aktuelle Zeit erhalten
+    time_t seconds = time(NULL);
+    int elapsedYears = seconds / (365.25 * 24 * 60 * 60);
+    return 1970 + elapsedYears;
 }
+
 
 void Stall::zeiginfo(){
     Islandpherd* isj;
@@ -73,6 +83,7 @@ void Stall::zeiginfo(){
     string gap="  ";
     const char separator    = ' ';
     const int nameWidth     = 10;
+
     cout<<"                Islandpherd hat 'Ekzem'       Shetlandpony ist 'Kinderlieb'      "<<endl; cout<<endl;
     cout<<"-------------------------------------------------------------------"<<endl;
     cout << left << setw(nameWidth) << setfill(separator) <<"  Rasse"<<gap;
@@ -106,6 +117,7 @@ void Stall::zeiginfo(){
             myoutfile<< "Islandpherd" << " " << pferdeboxen[i]->gibName() << "           "
                      << pferdeboxen[i]->GibGeburtsjahr() << "   " << (isj->hatEkzem()?"y":" n") << endl;
             cout<<endl;
+
         }
         else if(mo = dynamic_cast<Shetlandpony*>(pferdeboxen[i])){
             cout << left << setw(nameWidth) << setfill(separator) <<"Shetlandpony"<<gap;
@@ -115,13 +127,23 @@ void Stall::zeiginfo(){
             myoutfile << "Shetlandpony" << "   " << pferdeboxen[i]->gibName() << "     "
                       << pferdeboxen[i]->GibGeburtsjahr() << "   "<<(mo->istKinderlieb()?" y":"n")<<endl;
             cout<<endl;
-        }
 
+        }
     }
+    cout<<"-------------------------------------------------------------------"<<endl;
+    cout<<"Current time: "<<berechneJahr()<<endl;
+    cout<<"Durchschnittalt alle Ponys sind"<<durchschnittsalter()<<endl; cout<<endl;
     cout<<"Derzeit "<<belegtBoxen()<<" Ponys geritten werden"<<endl;
+
+    cout<<"-------------------------------------------------------------------"<<endl;
+
+
 }
 
+void Stall::wiedergang(int x)
+{
 
+}
 
 
 

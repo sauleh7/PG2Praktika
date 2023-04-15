@@ -4,6 +4,7 @@
 #include <vector>
 #include "pony.h"
 #include <iomanip>
+#include <ctime>
  #include <fstream>
 #define SIZE 20
 using namespace std;
@@ -18,6 +19,7 @@ public:
     float durchschnittsalter();
     void wiedergang(int x);
     void zeiginfo();
+    int berechneJahr();
 private:
     Pony* pferdeboxen[SIZE];
 };

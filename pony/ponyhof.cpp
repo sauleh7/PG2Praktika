@@ -105,11 +105,15 @@ void PonyHof::PonyAnlegen() {
 void PonyHof::ponyHolen(){
     cout<<"Name des zu holenden Ponys: "; string na; cin>>na;
     Pony* p = herausholen(na);
-    if(p==nullptr){
-    cout<<"Pony wird geritten"<<endl;
+    if(p !=nullptr){
+        cout<<na<<" wurde aus der Box geholt."<<endl;
     }else{
         cout<<"Kein Pony gefunden"<<endl;
     }
+}
+
+void PonyHof::feierabend()
+{
 
 }
 
